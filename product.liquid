@@ -1,0 +1,10 @@
+{% for tag in product.tags %}
+            {% if tag contains 'sub_heading' %}
+            <div class="product-single__title h1 sub"><span>{{tag | split: 'sub_heading_'}}</span></div>
+            {% endif %}
+            {% if tag contains 'sub_title' %}
+             <div class="green-text">
+               {{tag | split: 'sub_title_'}}
+              </div>
+            {% endif %}
+          {% endfor %}
